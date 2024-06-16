@@ -3,6 +3,7 @@
 
 int main(void) {
     printf("hello world!");
+    printf("Ggumi");
     
     return 0;
 }
