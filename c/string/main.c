@@ -19,7 +19,7 @@ int main(void) {
 
     char sisterName[1000] = "Seeun Jin";
 
-    printf("%lld\n", strlen(name));
+    printf("%d\n", length);
 
     if (strcmp(name, sisterName)) {
         printf("이름이 달라요\n");

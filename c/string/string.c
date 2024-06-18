@@ -1,7 +1,12 @@
 
 
 long long strlen(char * const str){
-    return strlen(str);
+    int l = 0;
+    for(int i = 0; str[i] != 0; i++){
+        l++;
+    }
+    return l;
+
 }
 
 int strcmp(char* const str1, char* const str2){
