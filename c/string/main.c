@@ -19,20 +19,22 @@ int main(void) {
 
     char sisterName[1000] = "Seeun Jin";
 
+    printf("%lld\n", strlen(name));
+
     if (strcmp(name, sisterName)) {
-        printf("이름이 달라요");
+        printf("이름이 달라요\n");
     }
     else {
-        printf("이름이 같아요");
+        printf("이름이 같아요\n");
     }
 
     strcpy(name, sisterName);
 
     if (strcmp(name, sisterName)) {
-        printf("이름이 달라요");
+        printf("이름이 달라요\n");
     }
     else {
-        printf("이름이 같아요");
+        printf("이름이 같아요\n");
     }
 
     return 0;
