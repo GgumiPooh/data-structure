@@ -6,6 +6,9 @@ typedef struct {
 } Human;
 
 void swap(Human* h1, Human* h2) {
+    Human temp = *h1;;
+    *h1 = *h2;
+    *h2 = temp;
 
 }
 
@@ -19,10 +22,12 @@ int main(void) {
 
     printf("Before Swapped\n");
     printf("child\nchild's weight: %d, child's height: %d\n", child.weight, child.height);
+    printf("adult\nadult's weight: %d, adult's height: %d\n", adult.weight, adult.height);
 
-    // swap(child, adult);
+    swap(&child, &adult);
 
-    printf("Before Swapped\n");
+    printf("\nAtfer Swapped\n");
+    printf("child\nchild's weight: %d, child's height: %d\n", child.weight, child.height);
     printf("adult\nadult's weight: %d, adult's height: %d\n", adult.weight, adult.height);
 
     return 0;
