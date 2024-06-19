@@ -1,10 +1,8 @@
-
+#include "./string.h"
 
 long long strlen(char * const str){
-    int l = 0;
-    for(int i = 0; str[i] != 0; i++){
-        l++;
-    }
+    long long l = 0;
+    for(; str[l] != 0; l++);
     return l;
 
 }
@@ -21,10 +19,11 @@ int strcmp(char* const str1, char* const str2){
     return 0;
 }
 
-int *strcpy(char* const source, char* destination)
+void strcpy(char* const source, char* destination)
 {
-    destination = source;
-    return 0;
+    for (int i = 0; source[i] != '\0'; ++i) {
+        destination[i] = source[i];
+    }
 }
     
 
