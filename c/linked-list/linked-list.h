@@ -8,7 +8,7 @@ typedef struct Node {
     struct Node* next; // 다음 노드를 가리키는 포인터
 } Node;
 
-// 함수 선언
+// 함수 선언리스트의 
 
 /**
  * @brief 주어진 데이터를 포함하는 새 노드를 생성합니다.
@@ -19,7 +19,7 @@ typedef struct Node {
 Node* create_node(int data);
 
 /**
- * @brief 리스트의 끝에 새 노드를 추가합니다.
+ * @brief 끝에 새 노드를 추가합니다.
  * 
  * @param head 리스트의 헤드에 대한 포인터
  * @param data 추가할 노드에 저장할 데이터
@@ -33,7 +33,7 @@ void append_node(Node** head, int data);
  * @param data 삽입할 노드에 저장할 데이터
  * @param position 삽입할 위치 (0부터 시작)
  */
-void insert_node(Node** head, int data, int position);
+void insert_node(Node* head, Node** tail, int data, int position);
 
 /**
  * @brief 리스트의 특정 위치에 있는 노드를 삭제합니다.
