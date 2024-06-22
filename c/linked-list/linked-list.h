@@ -19,7 +19,7 @@ typedef struct Node {
 Node* create_node(int data);
 
 /**
- * @brief 끝에 새 노드를 추가합니다.
+ * @brief 리스트의 맨 앞에 새 노드를 추가합니다.
  * 
  * @param head 리스트의 헤드에 대한 포인터
  * @param data 추가할 노드에 저장할 데이터
@@ -33,12 +33,12 @@ void append_node(Node** head, int data);
  * @param data 삽입할 노드에 저장할 데이터
  * @param position 삽입할 위치 (0부터 시작)
  */
-void insert_node(Node* head, Node** tail, int data, int position);
+void insert_node(Node** head, int data, int position);
 
 /**
  * @brief 리스트의 특정 위치에 있는 노드를 삭제합니다.
  * 
- * @param head 리스트의 헤드에 대한 포인터
+ * @param 리스트의 헤드에 대한 포인터
  * @param position 삭제할 노드의 위치 (0부터 시작)
  */
 void delete_node(Node** head, int position);
@@ -46,7 +46,7 @@ void delete_node(Node** head, int position);
 /**
  * @brief 리스트의 모든 노드를 출력합니다.
  * 
- * @param head 리스트의 헤드
+ * @param 리스트의 헤드
  */
 void print_list(Node* head);
 
