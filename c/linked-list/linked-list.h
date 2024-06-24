@@ -2,6 +2,7 @@
 #define LINKED_LIST_H
 #include "stdio.h"
 #include "stdlib.h"
+
 // 노드 구조체 정의
 typedef struct Node {
     int data;          // 노드가 저장하는 데이터
