@@ -19,17 +19,14 @@ int append_node(Node** head, int data) {
     newNode->next = *head;
     (*head) = newNode; 
     return 1;
-    //리스트 맨앞에 추가..? 맨 앞에 추가하면 됩니다요
-    
-    /*
-        Node* newNode = create_node(data);
-        (*tail)->next = newNode;
-        *tail = newNode;     
-    */
 }
 
 int insert_node(Node** head, int data, int position) {
     Node* newNode = create_node(data);
+
+    // + 새 노드 생성 실패 체크 후 실패코드 0 반환
+    if (newNode == NULL)
+        return 0;
 
     if (position == 0) {
         newNode->next = *head;
@@ -83,6 +80,9 @@ int delete_node(Node** head, int position) {
     prevNode->next = curNode->next;
     printf("Deallocated Node \n");
     free(curNode);
+
+    // + 최종적으로 성공했을 때 1 반환
+    return 1;
 }
 
 
@@ -97,7 +97,9 @@ int free_list(Node** head){
     if (*head != NULL && (**head).next == NULL) {
         printf("Deallocated Node \n");
         free(*head);
-        return 1;
+        
+        // + 122번 째 라인이 실행된 후에 return 1; 이 실행되어야 함
+        // - return 1;
     } 
     // 길이가 1이상일 때
     else {
@@ -112,8 +114,11 @@ int free_list(Node** head){
         }
         free(prevNode);
         printf("Deallocated Node \n");
-        return 1;
+        
+        // + 122번 째 라인이 실행된 후에 return 1; 이 실행되어야 함
+        // - return 1;
     }
 
     *head = NULL;
+    return 1; // + 122번 째 라인이 실행된 후에 return 1; 이 실행되어야 함
 }

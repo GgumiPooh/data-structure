@@ -46,61 +46,62 @@ int main(void) {
     int length = 0;
     Node* head = create_node(5);
     
+    // + head에 NULL이 들어갔는지 확인 후 length 값을 변경해줘야 된다...........................
+    if (head != NULL){
+        printf("success+\n");
+        length++;
+    } else {
+        printf("fail\n");
+    }
     
-    if(append_node(&head, 4) != 0){
+    if (append_node(&head, 4) != 0){
         printf("success+\n");
         length++;
+    } else {
+        printf("fail\n");
     }
-        else{
-            printf("fail\n");
             
-        }
-            
-    if(append_node(&head, 3) != 0){
+    if (append_node(&head, 3) != 0){
+        printf("success+\n");
+        length++;
+    } else {
+        printf("fail\n");
+    }
+
+    if (append_node(&head, 7) != 0){
         printf("success+\n");
         length++;
     }
-        else{
-            printf("fail\n");
-            
-        }
-    if(append_node(&head, 7) != 0){
+    else {
+        printf("fail\n");
+    }
+
+    if (insert_node(&head, 6, 3) != 0){
         printf("success+\n");
         length++;
     }
-        
-        else{
-            printf("fail\n");
-     
-        }
-    if(insert_node(&head, 6, 3) != 0){
-        printf("success+\n");
-        length++;
+    else {
+        printf("fail\n");
     }
-        else{
-            printf("fail\n");
-          
-        }
     
-    if(delete_node(&head, 0) != 0){
+    if (delete_node(&head, 0) != 0){
         printf("success-\n");
         length--;
+    } else {
+        printf("fail\n");
+        
     }
-        else{
-            printf("fail\n");
-         
-        }
     
     print_list(head);
+
     if(free_list(&head) != 0){
         printf("success-\n");
-        length--;
+        length = 0;
+        // + free_list 함수는 성공했을 때 length를 0으로 초기화해줘야 된다...........................
+    } else {
+        printf("fail\n");
     }
-        else{
-            printf("fail\n");}
-         
 
     printf("%d", length);
     return 0;
-
 }
