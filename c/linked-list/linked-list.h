@@ -2,6 +2,7 @@
 #define LINKED_LIST_H
 #include "stdio.h"
 #include "stdlib.h"
+
 // 노드 구조체 정의
 typedef struct Node {
     int data;          // 노드가 저장하는 데이터
@@ -24,7 +25,7 @@ Node* create_node(int data);
  * @param head 리스트의 헤드에 대한 포인터
  * @param data 추가할 노드에 저장할 데이터
  */
-void append_node(Node** head, int data);
+int append_node(Node** head, int data);
 
 /**
  * @brief 리스트의 특정 위치에 새 노드를 삽입합니다.
@@ -33,7 +34,7 @@ void append_node(Node** head, int data);
  * @param data 삽입할 노드에 저장할 데이터
  * @param position 삽입할 위치 (0부터 시작)
  */
-void insert_node(Node** head, int data, int position);
+int insert_node(Node** head, int data, int position);
 
 /**
  * @brief 리스트의 특정 위치에 있는 노드를 삭제합니다.
@@ -41,7 +42,7 @@ void insert_node(Node** head, int data, int position);
  * @param 리스트의 헤드에 대한 포인터
  * @param position 삭제할 노드의 위치 (0부터 시작)
  */
-void delete_node(Node** head, int position);
+int delete_node(Node** head, int position);
 
 /**
  * @brief 리스트의 모든 노드를 출력합니다.
@@ -55,6 +56,6 @@ void print_list(Node* head);
  * 
  * @param head 리스트의 헤드에 대한 포인터
  */
-void free_list(Node** head);
+int free_list(Node** head);
 
 #endif // LINKED_LIST_H
