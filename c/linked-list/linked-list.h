@@ -58,4 +58,4 @@ void print_list(Node* head);
  */
 int free_list(Node** head);
 
-#endif // LINKED_LIST_H
+#endif LINKED_LIST_H
