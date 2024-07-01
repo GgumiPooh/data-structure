@@ -7,6 +7,7 @@
 typedef struct Node{
     int data;
     struct Node* next;
+    struct Node* prev;
 } Node;
 
 Node* create_node(int data);
