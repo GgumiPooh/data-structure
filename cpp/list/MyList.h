@@ -2,7 +2,7 @@
 #define MYLIST_H
 
 class MyList {
-private:    
+private:
     class Node {
     public:
         int data;
@@ -19,8 +19,8 @@ public:
     void push_back(const int& val);
     void pop_back();
     int size() const;
-    int &back();
-    const int &back() const;
+    int& back();
+    const int& back() const;
 };
 
 #endif

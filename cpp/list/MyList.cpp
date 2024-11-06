@@ -1,11 +1,15 @@
-#include <iostream>
 #include "MyList.h"
+#include <iostream>
 
 using namespace std;
 
-MyList::MyList(): first_ptr(nullptr) { }
+MyList::MyList()
+    : first_ptr(nullptr)
+{
+}
 
-MyList::~MyList() {
+MyList::~MyList()
+{
     delete[] this->first_ptr;
 }
 
@@ -30,9 +34,10 @@ void MyList::push_back(const int& val)
 
 void MyList::pop_back()
 {
-    if(first_ptr == nullptr) return;
+    if (first_ptr == nullptr)
+        return;
 
-    if(first_ptr->next_ptr == nullptr) {
+    if (first_ptr->next_ptr == nullptr) {
         delete first_ptr;
         first_ptr = nullptr;
         return;
@@ -49,7 +54,8 @@ void MyList::pop_back()
 
 int MyList::size() const
 {
-    if(this->first_ptr ==  nullptr) return 0;
+    if (this->first_ptr == nullptr)
+        return 0;
 
     Node* cursor = this->first_ptr;
     int length = 1;
