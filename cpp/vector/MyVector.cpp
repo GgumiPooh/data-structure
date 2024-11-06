@@ -30,7 +30,7 @@ void MyVector::push_back(const int& value)
     if (cursor == max_size) {
         if (max_size >= 1) {
             int* new_array = new int[max_size * 2];
-            memcpy(new_array, array, max_size);
+            memcpy(new_array, array, sizeof(int)*max_size);
             max_size *= 2;
             delete[] array;
             array = new_array;
@@ -38,6 +38,8 @@ void MyVector::push_back(const int& value)
         } else {
             max_size = 1;
             array = new int(value);
+            cursor = 1;
+            
         }
     } else {
         array[cursor++] = value;
