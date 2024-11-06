@@ -14,17 +14,12 @@ private:
 
 public:
     MyList();
-
     ~MyList();
 
     void push_back(const int& val);
-
     void pop_back();
-
     int size() const;
-
     int &back();
-
     const int &back() const;
 };
 
